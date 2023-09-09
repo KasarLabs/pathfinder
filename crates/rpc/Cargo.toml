@@ -19,7 +19,6 @@ jsonrpsee = { version = "0.16.3", default-features = false, features = [
 ] }
 metrics = { workspace = true }
 pathfinder-common = { path = "../common" }
-pathfinder-compiler = { path = "../compiler" }
 pathfinder-ethereum = { path = "../ethereum" }
 pathfinder-executor = { path = "../executor" }
 pathfinder-merkle-tree = { path = "../merkle-tree" }

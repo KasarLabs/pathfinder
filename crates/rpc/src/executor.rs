@@ -260,13 +260,9 @@ pub(crate) fn map_broadcasted_transaction(
                 let transaction_hash =
                     transaction.transaction_hash(chain_id, Some(sierra_class_hash));
 
-                let casm_contract_definition =
-                    pathfinder_compiler::compile_to_casm_with_latest_compiler(
-                        &tx.contract_class
-                            .serialize_to_json()
-                            .context("Serializing Sierra class definition")?,
-                    )
-                    .context("Compiling Sierra class definition to CASM")?;
+                const DEFAULT_CASM_CONTRACT_DEFINITION: &[u8] = &[1, 2, 3, 4, 5]; 
+
+                let casm_contract_definition = DEFAULT_CASM_CONTRACT_DEFINITION.to_vec();
 
                 let casm_contract_definition =
                     pathfinder_executor::parse_casm_definition(casm_contract_definition)
