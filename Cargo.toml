@@ -1,7 +1,6 @@
 [workspace]
 members = [
     "crates/common",
-    "crates/compiler",
     "crates/ethereum",
     "crates/executor",
     "crates/gateway-client",
